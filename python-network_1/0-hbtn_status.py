@@ -3,10 +3,7 @@
 import urllib.request
 
 if __name__ == "__main__":
-    url = "https://alu-intranet.hbtn.io/status"
-    if len(sys.argv) > 1 and sys.argv[1] == "--local":
-        url = "http://0.0.0.0:5050/status"
-
+    request = urllib.request.Request("http://0.0.0.0:5050/status")
     request = urllib.request.Request("https://alu-intranet.hbtn.io/status")
     with urllib.request.urlopen(request) as response:
         body = response.read()
