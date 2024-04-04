@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Deletes all State objects from the database hbtn_0e_6_usa."""
 import sys
-from model_state import Base. State
+from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
@@ -12,6 +12,5 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     for instance in session.query(State).filter(State.name.like('%a%')):
-        if "a" in state.name:
             session.delete(instance)
     session.commit()
