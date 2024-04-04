@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Deletes all State objects from the database hbtn_0e_6_usa."""
+"""prints the state object with the name passed as argument from the database."""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
