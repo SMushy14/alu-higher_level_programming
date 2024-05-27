@@ -1,12 +1,10 @@
 #!/usr/bin/node
-function printMessage(numArgs) {
-  if (numArgs === 0) {
-    console.log('No argument');
-  } else if (numArgs === 1) {
-    console.log('Argument found');
-  } else {
-    console.log('Arguments found');
-  }
-}
+const args = process.argv.slice(2);
 
-printMessage(arguments.length);
+if (args.length === 0) {
+  console.log('No argument');
+} else if (args.length === 1) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
+}
