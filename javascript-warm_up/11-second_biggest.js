@@ -5,7 +5,7 @@ if (args.length <= 3) {
   console.log('0');
 } else {
   let second = parseInt(args[2]);
-  let high = parseInt([3]);
+  let high = parseInt(args[3]);
   for (let i = 2; i < args.length; i++) {
     const current = parseInt(args[i]);
     if (current > high) {
